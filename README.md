@@ -1,8 +1,10 @@
 # fp.js
 
+## Functional Programming in JavaScript
+
 This project is an attempt to describe FP patterns based on Haskell in JS.
 
-To install dependencies:
+## To install dependencies:
 
 ```bash
 bun install
