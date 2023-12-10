@@ -4,3 +4,5 @@ const main = () => {
   const numbers = [...Array(100).keys()];
   console.log(tail(numbers));
 };
+
+main();
