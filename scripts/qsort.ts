@@ -1,5 +1,3 @@
-import { shuffle } from "../libraries/array.ts";
-
 export const qsort = ([x, ...xs]: number[]): number[] =>
   x === undefined
     ? []
@@ -9,10 +7,3 @@ export const qsort = ([x, ...xs]: number[]): number[] =>
         const larger = xs.filter((b) => b > x);
         return [...qsort(smaller), ...pivot, ...qsort(larger)];
       })();
-
-const main = () => {
-  const numbers = shuffle([...Array(5).keys()].map((x) => ++x));
-  console.log(qsort(numbers));
-};
-
-main();
