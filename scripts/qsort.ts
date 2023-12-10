@@ -1,6 +1,6 @@
 import { shuffle } from "../libraries/array.ts";
 
-const qsort = ([x, ...xs]: number[]): number[] =>
+export const qsort = ([x, ...xs]: number[]): number[] =>
   x === undefined
     ? []
     : (() => {
