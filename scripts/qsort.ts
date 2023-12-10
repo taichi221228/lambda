@@ -11,7 +11,7 @@ const qsort = ([x, ...xs]: number[]): number[] =>
       })();
 
 const main = () => {
-  const numbers = shuffle([...Array(100).keys()]);
+  const numbers = shuffle([...Array(5).keys()].map((x) => ++x));
   console.log(qsort(numbers));
 };
 
