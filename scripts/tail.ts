@@ -1,1 +1,1 @@
-export const tail = (xs: number[]): number[] => xs.slice(1);
+export const tail = <T>(arr: T[]) => arr.slice(1);

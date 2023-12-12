@@ -1,2 +1,1 @@
-export const drop = (x: number, xs: number[]): number[] =>
-  x === 0 ? [] : xs.slice(x);
+export const drop = <T>(x: number, arr: T[]) => (x === 0 ? [] : arr.slice(x));

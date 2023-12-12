@@ -1,1 +1,1 @@
-export const head = (xs: number[]): number => xs[0];
+export const head = <T>(arr: T[]) => arr[0];
