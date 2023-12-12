@@ -1,2 +1,5 @@
+import { head } from "./head.ts";
+import { tail } from "./tail.ts";
+
 export const take = <T>(x: number, arr: T[]): T[] =>
-  x === 0 ? [] : [arr[0], ...take(x - 1, arr.slice(1))];
+  x === 0 ? [] : [head(arr), ...take(x - 1, tail(arr))];
