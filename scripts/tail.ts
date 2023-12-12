@@ -1,1 +1,1 @@
-export const tail = <T>([first, ...rest]: T[]) => rest;
+export const tail = <T>([_, ...rest]: T[]) => rest;
