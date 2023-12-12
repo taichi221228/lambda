@@ -1,2 +1,4 @@
-export const drop = <T>(x: number, [first, ...rest]: T[]): T[] =>
-  x === 0 ? [first, ...rest] : drop(x - 1, rest);
+import { tail } from "./tail.ts";
+
+export const drop = <T>(x: number, arr: T[]): T[] =>
+  x === 0 ? arr : drop(x - 1, tail(arr));
