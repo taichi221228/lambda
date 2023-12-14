@@ -1,4 +1,4 @@
-import { numbers } from "../../constants/numbers.ts";
+import { numbers } from "$constants/numbers.ts";
 import { sum } from "./sum.ts";
 
 const main = () => {

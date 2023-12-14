@@ -16,7 +16,16 @@
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "types": [
-      "bun-types" // add Bun global
-    ]
+      "bun-types"
+      // add Bun global
+    ],
+    "paths": {
+      "$constants": ["constants"],
+      "$constants/*": ["constants/*"],
+      "$libraries": ["libraries"],
+      "$libraries/*": ["libraries/*"],
+      "$scripts": ["scripts"],
+      "$scripts/*": ["scripts/*"]
+    }
   }
 }
