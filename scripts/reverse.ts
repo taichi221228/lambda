@@ -1,2 +1,2 @@
-export const reverse = <T>([first, ...rest]: T[]): T[] =>
-  first === undefined ? [] : [...reverse(rest), first];
+export const reverse = <T>([x, ...xs]: T[]): T[] =>
+  x === undefined ? [] : [...reverse(xs), x];

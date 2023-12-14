@@ -1,2 +1,2 @@
-export const head = <T>(arr: T[]) =>
-  arr.length === 0 ? Error("Empty array") : arr[0];
+export const head = <T>(xs: T[]) =>
+  xs.length === 0 ? Error("Empty array") : xs[0];
