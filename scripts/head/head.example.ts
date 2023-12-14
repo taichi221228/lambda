@@ -1,5 +1,5 @@
-import { numbers } from "../constants/numbers.ts";
-import { head } from "../scripts/head.ts";
+import { numbers } from "../../constants/numbers.ts";
+import { head } from "./head.ts";
 
 const main = () => {
   /**

@@ -1,6 +1,6 @@
-import { numbers } from "../constants/numbers.ts";
-import { shuffle } from "../libraries/array.ts";
-import { qsort } from "../scripts/qsort.ts";
+import { numbers } from "../../constants/numbers.ts";
+import { shuffle } from "../../libraries/array.ts";
+import { qsort } from "./qsort.ts";
 
 const main = () => {
   /**

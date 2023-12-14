@@ -1,5 +1,5 @@
-import { numbers } from "../constants/numbers.ts";
-import { map } from "../scripts/map.ts";
+import { numbers } from "../../constants/numbers.ts";
+import { map } from "./map.ts";
 
 const main = () => {
   /**
