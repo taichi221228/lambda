@@ -26,6 +26,7 @@
       "$libraries/*": ["libraries/*"],
       "$scripts": ["scripts"],
       "$scripts/*": ["scripts/*"]
-    }
+    },
+    "baseUrl": ".",
   }
 }
