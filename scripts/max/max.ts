@@ -1,2 +1,2 @@
-export const max = ([x, ...xs]: number[]): number =>
-  x === undefined ? Number.MIN_SAFE_INTEGER : x > max(xs) ? x : max(xs);
+export const max = ([n, ...ns]: number[]): number =>
+  n === undefined ? Number.MIN_SAFE_INTEGER : n > max(ns) ? n : max(ns);

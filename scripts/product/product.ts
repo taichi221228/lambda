@@ -1,2 +1,2 @@
-export const product = ([x, ...xs]: number[]): number =>
-  x === undefined ? 1 : x * product(xs);
+export const product = ([n, ...ns]: number[]): number =>
+  n === undefined ? 1 : n * product(ns);

@@ -1,2 +1,2 @@
-export const sum = ([x, ...xs]: number[]): number =>
-  x === undefined ? 0 : x + sum(xs);
+export const sum = ([n, ...ns]: number[]): number =>
+  n === undefined ? 0 : n + sum(ns);

@@ -1,4 +1,4 @@
 import { tail } from "$scripts/tail/tail.ts";
 
-export const take = <T>(x: number, xs: T[]): T[] =>
-  x === 0 ? [] : [xs[0], ...take(x - 1, tail(xs))];
+export const take = <T>(i: number, xs: T[]): T[] =>
+  i === 0 ? [] : [xs[0], ...take(i - 1, tail(xs))];

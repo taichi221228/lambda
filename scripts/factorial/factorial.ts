@@ -1,2 +1,2 @@
-export const factorial = (x: number): number =>
-  x === 1 ? 1 : x * factorial(x - 1);
+export const factorial = (n: number): number =>
+  n === 1 ? 1 : n * factorial(n - 1);
