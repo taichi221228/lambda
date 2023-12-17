@@ -1,1 +1,3 @@
-export const head = <T>(xs: T[]) => xs[0] ?? Error("Empty array");
+import { index } from "$scripts/index";
+
+export const head = <T>(xs: T[]) => index(0, xs) ?? Error("Empty array");
