@@ -3,9 +3,9 @@ import { index } from "./index.ts";
 
 const main = () => {
   /**
-   * @returns {3}
+   * @returns {4}
    */
-  console.log(index(2, numbers));
+  console.log(index(3, numbers));
 };
 
 main();
