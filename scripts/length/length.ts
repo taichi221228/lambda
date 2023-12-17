@@ -1,4 +1,2 @@
-import { tail } from "$scripts/tail/tail.ts";
-
-export const length = <T>(xs: T[]): number =>
-  xs.length === 0 ? 0 : 1 + length(tail(xs));
+export const length = <T>([x, ...xs]: T[]): number =>
+  x === undefined ? 0 : 1 + length(xs);
