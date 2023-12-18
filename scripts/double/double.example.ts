@@ -2,7 +2,7 @@ import { double } from "./double.ts";
 
 const main = () => {
   /**
-   * @returns {2}
+   * @returns {6}
    */
   console.log(double(3));
 };
