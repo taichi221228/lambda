@@ -2,6 +2,7 @@ import { add } from "./add.ts";
 
 const main = () => {
   const add1 = add(3);
+
   /**
    * @return {7}
    */
