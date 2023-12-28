@@ -42,7 +42,6 @@ const todoMapper = createMap<Todo, TodoFormatted>(({ id, title, ...rest }) => ({
   title: `${id} - ${title}`,
   ...rest,
 }));
-
 const formattedTodos = Array.from(todoMapper(completeFilter(todos)));
 
 console.log(formattedTodos);
