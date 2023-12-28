@@ -3,13 +3,13 @@ import { Todo, TodoFormatted } from "./type.ts";
 const res = await fetch("https://jsonplaceholder.typicode.com/todos");
 const todos = await res.json<Todo[]>();
 
+type Sequence<T> = T[] | Generator<T, void, unknown>;
+
 const createFilter =
   <T>(
     predicate: (item: T) => boolean,
-  ): ((
-    sequence: T[] | Generator<T, void, unknown>,
-  ) => Generator<T, void, unknown>) =>
-  (sequence: T[] | Generator<T, void, unknown>) => {
+  ): ((sequence: Sequence<T>) => Generator<T, void, unknown>) =>
+  (sequence: Sequence<T>) => {
     function* filter() {
       for (const item of sequence) {
         if (predicate(item)) {
@@ -24,10 +24,8 @@ const createFilter =
 const createMap =
   <T, R>(
     mapper: (sequence: T) => R,
-  ): ((
-    sequence: T[] | Generator<T, void, unknown>,
-  ) => Generator<R, void, unknown>) =>
-  (sequence: T[] | Generator<T, void, unknown>) => {
+  ): ((sequence: Sequence<T>) => Generator<R, void, unknown>) =>
+  (sequence: Sequence<T>) => {
     function* map() {
       for (const item of sequence) {
         yield mapper(item);
