@@ -5,8 +5,10 @@ const todos = await res.json<Todo[]>();
 
 function createFilter<T>(
   predicate: (item: T) => boolean,
-): (sequence: T[]) => Generator<T, void, unknown> {
-  return (sequence: T[]) => {
+): (
+  sequence: T[] | Generator<T, void, unknown>,
+) => Generator<T, void, unknown> {
+  return (sequence: T[] | Generator<T, void, unknown>) => {
     function* filter() {
       for (const item of sequence) {
         if (predicate(item)) {
@@ -21,8 +23,10 @@ function createFilter<T>(
 
 function createMap<T, R>(
   mapper: (sequence: T) => R,
-): (sequence: Generator<T, void, unknown>) => Generator<R, void, unknown> {
-  return (sequence: Generator<T, void, unknown>) => {
+): (
+  sequence: T[] | Generator<T, void, unknown>,
+) => Generator<R, void, unknown> {
+  return (sequence: T[] | Generator<T, void, unknown>) => {
     function* map() {
       for (const item of sequence) {
         yield mapper(item);
