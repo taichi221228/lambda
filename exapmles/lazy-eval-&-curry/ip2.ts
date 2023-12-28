@@ -8,8 +8,8 @@ const formattedTodos = todos.reduce(
     if (completed) {
       acc.push({
         title: `${id} - ${title}`,
-        completed,
         ...rest,
+        completed,
       });
     }
     return acc;
