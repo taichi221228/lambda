@@ -9,31 +9,25 @@ const createFilter =
   <T>(
     predicate: (item: T) => boolean,
   ): ((sequence: Sequence<T>) => Generator<T, void, unknown>) =>
-  (sequence: Sequence<T>) => {
-    function* filter() {
+  (sequence: Sequence<T>) =>
+    (function* () {
       for (const item of sequence) {
         if (predicate(item)) {
           yield item;
         }
       }
-    }
-
-    return filter();
-  };
+    })();
 
 const createMap =
   <T, R>(
     mapper: (sequence: T) => R,
   ): ((sequence: Sequence<T>) => Generator<R, void, unknown>) =>
-  (sequence: Sequence<T>) => {
-    function* map() {
+  (sequence: Sequence<T>) =>
+    (function* () {
       for (const item of sequence) {
         yield mapper(item);
       }
-    }
-
-    return map();
-  };
+    })();
 
 const completeFilter = createFilter<Todo>((todo) => todo.completed);
 const todoMapper = createMap<Todo, TodoFormatted>(({ id, title, ...rest }) => ({
